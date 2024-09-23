@@ -1,10 +1,7 @@
 with open("invited_names.txt", "r") as data_file:
     names = data_file.readlines()
 
-new_names = []
-for name in names:
-    stripped_name = name.strip()
-    new_names.append(stripped_name)
+new_names = [name.strip() for name in names]
 
 with open("starting_letter.txt") as data_file:
     email = data_file.read()
